@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI学习第874篇 - AI效率指南</title>
+    <meta name="description" content="AI学习第874篇 AI学习第874篇：从“跟着跑”到“自己走”，我的深度学习实战心得 不知不觉，这个系列已经写到第874篇了。说实话，连我自己都没想过能坚持这么久。今天不聊高大上的理论，也不安利那些你收藏了又吃灰的教程，就说说我在最近一个...">
+    <meta name="keywords" content="AI工具,AI教程,AI编程,AI学习第874篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0874-AI学习第874篇.html">
+    <meta property="og:title" content="AI学习第874篇">
+    <meta property="og:description" content="AI学习第874篇 AI学习第874篇：从“跟着跑”到“自己走”，我的深度学习实战心得 不知不觉，这个系列已经写到第874篇了。说实话，连我自己都没想过能坚持这么久。今天不聊高大上的理论，也不安利那些你收藏了又吃灰的教程，就说说我在最近一个...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0874-AI学习第874篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI学习第874篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "AI学习第874篇 AI学习第874篇：从“跟着跑”到“自己走”，我的深度学习实战心得 不知不觉，这个系列已经写到第874篇了。说实话，连我自己都没想过能坚持这么久。今天不聊高大上的理论，也不安利那些",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0874-AI学习第874篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI编程</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>AI学习第874篇</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>不知不觉，这个系列已经写到第874篇了。说实话，连我自己都没想过能坚持这么久。今天不聊高大上的理论，也不安利那些你收藏了又吃灰的教程，就说说我在最近一个月里，如何从“照着别人的代码复制粘贴”过渡到“自己动手改模型、调参数”的过程。如果你也卡在“看懂了但写不出来”的阶段，这篇应该能给你一点启发。</p>
+
+<h2>你学会的不是AI，是“AI的说明书”</h2>
+
+<p>很多新手上来就啃《动手学深度学习》或者吴恩达的课，结果呢？过了一两周，卷积、循环、注意力机制背得溜，一打开Jupyter Notebook，连个简单的图像分类都跑不通。为啥？因为我们把“理解原理”和“会编程”搞混了。</p>
+
+<p>我的经验是：<strong>先别管论文，先跑通一个项目</strong>。比如用PyTorch的官方教程写一个ResNet的CIFAR-10分类器。这个过程中你会遇到：数据加载、张量形状、GPU分配、损失函数计算、反向传播……这些实操问题，书上再详细也没用。跑通了，你才有“手感”。</p>
+
+<h2>小标题1：别再用“一键运行”的Colab笔记了</h2>
+
+<p>以前我特别依赖那些别人整理好的Google Colab笔记，点击“运行所有单元格”，等几分钟，结果出来，成就感爆棚。但关上浏览器，脑子里一片空白。</p>
+
+<p>上个月我强迫自己做三件事：</p>
+
+<p>1. <strong>手敲代码</strong>，至少核心部分（模型定义、训练循环）不复制。</p>
+<p>2. <strong>改参数</strong>，比如把学习率从0.001改成0.01，观察损失曲线变化。</p>
+<p>3. <strong>加日志</strong>，每50个batch打印一次当前准确率和损失，盯着它看，理解训练过程。</p>
+
+<p>这个习惯坚持了20天，我发现自己对“过拟合”和“欠拟合”的理解不再是概念，而是<strong>肉眼可见的曲线形状</strong>。那种成就感，比任何证书都实在。</p>
+
+<h2>小标题2：卡住了？先拆解成“可解决的小问题”</h2>
+
+<p>AI学习最容易让人崩溃的是“一步错，全盘崩”。比如你写了一个Transformer的分类器，跑起来报错`size mismatch`，你根本不知道是维度没对齐还是输入格式不对。</p>
+
+<p>我的笨办法是：<strong>把问题拆成最小的单元</strong>。比如：</p>
+
+<ul>
+<li>确认输入张量的形状（print出来看）</li>
+<li>单独测试前向传播，不训练</li>
+<li>用一个小批量数据（比如4张图片）跑一次反向传播</li>
+<li>检查梯度是否正常（有没有NaN）</li>
+</ul>
+
+<p>大多数时候，问题出在数据处理环节。比如图像归一化搞反了，或者标签索引从0开始还是1开始。<strong>把大任务分解成小实验，每次只验证一个环节</strong>，焦虑感立刻减半。</p>
+
+<h2>小标题3：不要只学一个框架，但要先精通一个</h2>
+
+<p>很多人问我该学TensorFlow还是PyTorch。我的建议是：先选一个死磕三个月。我选了PyTorch，因为它调试方便，社区活跃，而且现在工业界越来越认可。当你把PyTorch的DataLoader、nn.Module、autograd、optimizer都用熟之后，再去学TensorFlow的Keras或者JAX，你会发现很多概念是相通的。</p>
+
+<p>关键不是哪个框架“最好”，而是你用它<strong>完整地做过3-5个项目</strong>。我最近用PyTorch复现了一个GAN，从生成器结构崩溃到最终能画出以假乱真的手写数字，折腾了整整一周。但这一周让我彻底理解了对抗训练的本质。</p>
+
+<h2>小标题4：学习AI，本质是学习“调试思维”</h2>
+
+<p>最后想说，AI学习不是背公式，而是养成一套“假设-验证-修正”的思维方式。当你遇到模型不收敛，不要慌——先检查数据是否合理，再检查梯度是否正常，然后检查学习率和优化器设置。每一步都是一次小实验。</p>
+
+<p>我现在每天刷一遍开源社区的Issues，看看别人踩过的坑，再想想自己如果遇到会怎么处理。这种“思维预演”比读十篇论文都管用。</p>
+
+<p>好了，今天就聊到这儿。第875篇我们说说怎么用大模型API做个实用的小工具。欢迎在评论区聊聊你最近卡在哪里，咱们一起拆解。</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0123-Copilot实测体验报告.html">Copilot实测体验报告</a></li>
+<li><a href="/pages/articles/0817-AI编程第817篇.html">AI编程第817篇</a></li>
+<li><a href="/pages/articles/0056-AI编程入门完全指南2026.html">AI编程入门完全指南2026</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

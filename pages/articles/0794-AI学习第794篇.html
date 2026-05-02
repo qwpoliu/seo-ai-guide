@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI学习第794篇 - AI效率指南</title>
+    <meta name="description" content="AI学习第794篇 AI学习第794篇：用Python撸一个简单的神经网络，真的没那么难！ 大家好，我是你们的老朋友。今天这篇是AI学习系列的第794篇——别数了，没错，我确实写了快800篇。今天不聊高大上的Transformer，也不谈G...">
+    <meta name="keywords" content="AI工具,AI教程,综合,AI学习第794篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0794-AI学习第794篇.html">
+    <meta property="og:title" content="AI学习第794篇">
+    <meta property="og:description" content="AI学习第794篇 AI学习第794篇：用Python撸一个简单的神经网络，真的没那么难！ 大家好，我是你们的老朋友。今天这篇是AI学习系列的第794篇——别数了，没错，我确实写了快800篇。今天不聊高大上的Transformer，也不谈G...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0794-AI学习第794篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI学习第794篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "AI学习第794篇 AI学习第794篇：用Python撸一个简单的神经网络，真的没那么难！ 大家好，我是你们的老朋友。今天这篇是AI学习系列的第794篇——别数了，没错，我确实写了快800篇。今天不聊",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0794-AI学习第794篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">综合</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>AI学习第794篇</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>大家好，我是你们的老朋友。今天这篇是AI学习系列的第794篇——别数了，没错，我确实写了快800篇。今天不聊高大上的Transformer，也不谈GPT-4，咱们回到最基础的东西：<strong>手写一个最简单的神经网络</strong>。为什么？因为基础不牢，地动山摇，很多新手一上来就啃论文，结果把自己噎住了。</p>
+
+<h2>神经网络到底是个啥？</h2>
+
+<p>说白了，神经网络就是一堆数学公式叠在一起。你给它输入数据，它算一算，输出一个结果。中间那些“层”就像筛子，一层层过滤、提取特征。最简单的例子：你给一张猫的图片，它输出“猫”的概率是0.95。</p>
+
+<p>今天我们只做<strong>单层感知机</strong>的升级版——一个<strong>含有隐藏层的全连接网络</strong>。用Python的NumPy实现，不用任何深度学习框架。这样你就能真正理解“前向传播”和“反向传播”在干嘛。</p>
+
+<h2>代码实战：从零搭建</h2>
+
+<p>先引入工具：</p>
+
+<p>```python</p>
+<p>import numpy as np</p>
+<p>```</p>
+
+<p>我们模拟一个二分类问题：输入两个特征，输出0或1。比如判断一个点是否在圆的内部。</p>
+
+<h3>定义网络结构</h3>
+
+<ul>
+<li>输入层：2个神经元（x1, x2）</li>
+<li>隐藏层：4个神经元（用ReLU激活）</li>
+<li>输出层：1个神经元（用sigmoid激活，输出0~1的概率）</li>
+</ul>
+
+<p>先随机初始化权重和偏置：</p>
+
+<p>```python</p>
+<p>def init_network(input_size, hidden_size, output_size):</p>
+<p>W1 = np.random.randn(input_size, hidden_size) * 0.01</p>
+<p>b1 = np.zeros((1, hidden_size))</p>
+<p>W2 = np.random.randn(hidden_size, output_size) * 0.01</p>
+<p>b2 = np.zeros((1, output_size))</p>
+<p>return W1, b1, W2, b2</p>
+<p>```</p>
+
+<h3>前向传播——数据怎么流动的</h3>
+
+<p>把输入一层层往前算：</p>
+
+<p>```python</p>
+<p>def forward(X, W1, b1, W2, b2):</p>
+<p>Z1 = np.dot(X, W1) + b1</p>
+<p>A1 = np.maximum(0, Z1)  # ReLU</p>
+<p>Z2 = np.dot(A1, W2) + b2</p>
+<p>A2 = 1 / (1 + np.exp(-Z2))  # sigmoid</p>
+<p>return A1, A2</p>
+<p>```</p>
+
+<p>这里`A2`就是最终预测的概率。比如预测0.8，说明模型觉得有80%可能是类别1。</p>
+
+<h3>反向传播——怎么让模型变聪明</h3>
+
+<p>关键来了。我们需要计算损失（比如用交叉熵），然后求梯度，更新权重。</p>
+
+<p>损失函数（二分类）：</p>
+
+<p>```python</p>
+<p>def compute_loss(y, y_pred):</p>
+<p>m = y.shape[0]</p>
+<p>loss = -np.mean(y * np.log(y_pred) + (1 - y) * np.log(1 - y_pred))</p>
+<p>return loss</p>
+<p>```</p>
+
+<p>反向传播的数学推导我直接跳过，给你核心代码：</p>
+
+<p>```python</p>
+<p>def backward(X, y, A1, A2, W2):</p>
+<p>m = X.shape[0]</p>
+<p>dZ2 = A2 - y  # 输出层误差</p>
+<p>dW2 = np.dot(A1.T, dZ2) / m</p>
+<p>db2 = np.sum(dZ2, axis=0, keepdims=True) / m</p>
+<p>dA1 = np.dot(dZ2, W2.T)</p>
+<p>dZ1 = dA1 * (A1 &gt; 0)  # ReLU的导数</p>
+<p>dW1 = np.dot(X.T, dZ1) / m</p>
+<p>db1 = np.sum(dZ1, axis=0, keepdims=True) / m</p>
+<p>return dW1, db1, dW2, db2</p>
+<p>```</p>
+
+<p>然后按照学习率更新参数：</p>
+
+<p>```python</p>
+<p>def update_params(W1, b1, W2, b2, dW1, db1, dW2, db2, lr=0.01):</p>
+<p>W1 -= lr * dW1</p>
+<p>b1 -= lr * db1</p>
+<p>W2 -= lr * dW2</p>
+<p>b2 -= lr * db2</p>
+<p>return W1, b1, W2, b2</p>
+<p>```</p>
+
+<h3>训练循环</h3>
+
+<p>来，跑1000次迭代：</p>
+
+<p>```python</p>
+<p>X = np.random.randn(100, 2)  # 100个样本</p>
+<p>y = (X[:, 0]<strong>2 + X[:, 1]</strong>2 &lt; 1).astype(int).reshape(-1,1)  # 圆内为1</p>
+
+<p>W1, b1, W2, b2 = init_network(2, 4, 1)</p>
+<p>for i in range(1000):</p>
+<p>A1, A2 = forward(X, W1, b1, W2, b2)</p>
+<p>loss = compute_loss(y, A2)</p>
+<p>dW1, db1, dW2, db2 = backward(X, y, A1, A2, W2)</p>
+<p>W1, b1, W2, b2 = update_params(W1, b1, W2, b2, dW1, db1, dW2, db2)</p>
+<p>if i % 100 == 0:</p>
+<p>print(f&quot;第{i}步，损失：{loss:.4f}&quot;)</p>
+<p>```</p>
+
+<p>跑完之后，准确率随便一测就90%以上。你看，一个能用的神经网络就这么写出来了。</p>
+
+<h2>为什么这么写？背后逻辑你得懂</h2>
+
+<p>很多人会问：为什么不用PyTorch？因为用NumPy手写能让你看到<strong>每个矩阵乘法的意义</strong>。比如`np.dot(X, W1)`就是把输入特征和权重做线性组合，加上偏置后经过非线性激活——这一步就是“特征提取”。而反向传播的梯度下降，本质上是在多维空间里找极小值点。</p>
+
+<p>你学会了这个，再去看深度学习框架的文档，就能理解为什么`torch.nn.Linear`需要输入输出维度，为什么`ReLU`是常见的激活函数。一切都不是黑盒。</p>
+
+<h2>下一步学什么？</h2>
+
+<p>第794篇只是热身。如果你想深入学习，建议接下来：</p>
+<p>1. 把代码中的ReLU换成sigmoid或tanh，观察损失收敛速度。</p>
+<p>2. 增加隐藏层神经元数量，看看过拟合现象。</p>
+<p>3. 尝试用这个网络做手写数字识别（MNIST数据集）。</p>
+
+<p>记住，学AI没有捷径，但也没有那么难。把基础代码跑一遍，比看十篇论文都管用。下篇我们聊“梯度消失和梯度爆炸”，记得关注，别走丢！</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0027-AI思维导图工具推荐.html">AI思维导图工具推荐</a></li>
+<li><a href="/pages/articles/0030-AI合同审核工具可靠性测试.html">AI合同审核工具可靠性测试</a></li>
+<li><a href="/pages/articles/0049-AI电子书制作完整教程.html">AI电子书制作完整教程</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

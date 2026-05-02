@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://your-domain.vercel.app/sitemap.xml
+Sitemap: https://qwpoliu.github.io/seo-ai-guide/sitemap.xml

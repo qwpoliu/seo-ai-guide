@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stable Diffusion进阶使用技巧 - AI效率指南</title>
+    <meta name="description" content="Stable Diffusion进阶使用技巧 Stable Diffusion进阶使用技巧 玩Stable Diffusion一段时间了？生成的图总是差那么点意思？别急，今天分享几个我亲测好用的进阶技巧，都是实战中摸索出来的干货。不用什么高...">
+    <meta name="keywords" content="AI工具,AI教程,AI图像,Stable Diffusion进阶使用">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0040-StableDiffusion进阶使用技.html">
+    <meta property="og:title" content="Stable Diffusion进阶使用技巧">
+    <meta property="og:description" content="Stable Diffusion进阶使用技巧 Stable Diffusion进阶使用技巧 玩Stable Diffusion一段时间了？生成的图总是差那么点意思？别急，今天分享几个我亲测好用的进阶技巧，都是实战中摸索出来的干货。不用什么高...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0040-StableDiffusion进阶使用技.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Stable Diffusion进阶使用技巧",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "Stable Diffusion进阶使用技巧 Stable Diffusion进阶使用技巧 玩Stable Diffusion一段时间了？生成的图总是差那么点意思？别急，今天分享几个我亲测好用的进阶技",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0040-StableDiffusion进阶使用技.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI图像</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>Stable Diffusion进阶使用技巧</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>玩Stable Diffusion一段时间了？生成的图总是差那么点意思？别急，今天分享几个我亲测好用的进阶技巧，都是实战中摸索出来的干货。不用什么高大上的理论，直接告诉你“怎么调”，看完就能用。</p>
+
+<h2>学会用负面提示词（Negative Prompt）</h2>
+
+<p>很多人只写正面提示词，忘了还有个反向过滤器。其实负面提示词才是提升画质的捷径。比如你想画一个干净的人物，却在正面写了“clean face”效果一般？直接在负面里加“deformed, ugly, blurry, bad anatomy, extra limbs”就能大幅减少畸形。更实用的：画风景时加“watermark, text, signature”避免水印乱入。想避免手部崩坏？加“bad hands, missing fingers, extra fingers”。记住，负面提示词越长不一定越好，挑最关键的3-5个词，效果立竿见影。</p>
+
+<h2>采样器和步数怎么选？</h2>
+
+<p>新手总以为步数越高越好，其实采样器的选择比步数更关键。给大家一个懒人套餐：<strong>DPM++ 2M Karras</strong>是万金油，20-30步就够，出图快且稳定。喜欢更锐利的细节？试试<strong>Euler a</strong>，步数30-40，但容易过曝。追求极致画质选<strong>DDIM</strong>，步数50+才能看出优势，适合批量出图。一句话总结：日常出图用DPM++ 2M Karras 30步，别动不动跑100步，除了费电没区别。</p>
+
+<h2>CFG Scale不是越大越好</h2>
+
+<p>很多教程告诉你CFG Scale调高能让画面更符合提示词，但调太高会毁图。我实测最靠谱的范围是<strong>7-11</strong>。低于7，画面会“放飞自我”偏离提示；高于12，对比度爆炸，颜色刺眼，细节像塑料。举个例子：画一个“夕阳下的海滩”，CFG=7时温柔自然，CFG=15时天空像火烧了一样失真。建议你固定一个主题，从7开始每步加1，找到你喜欢的那个平衡点。</p>
+
+<h2>分辨率与高清修复——先小后大</h2>
+
+<p>很多人直接输512x768或更大分辨率，结果显存爆炸还崩图。正确做法：<strong>先生成小图（512x512或512x768），再用高清修复（Hires.fix）放大</strong>。高清修复里有个技巧：放大倍数别选2x，选1.5x或1.75x更自然。重绘幅度（Denoising strength）设置在0.3-0.5之间，太高会改变原图构图，太低没细节。比如你先跑一张512x512，用Hires.fix放大到768x768，重绘幅度0.4，效果比直接出768x768好一倍。</p>
+
+<h2>模型融合大法——自己调出专属风格</h2>
+
+<p>Stable Diffusion的模型五花八门，但总有“这个风格我喜欢但那个细节更好”的纠结。其实官方提供了模型融合功能（Checkpoint Merger），把自己喜欢的两个模型按比例混合。比如你要写实风但想要二次元眼睛，把写实模型权重设0.7，二次元模型0.3。注意：<strong>不要混合超过两个模型</strong>，否则容易出现鬼影。融合后记得用负面提示词清理一下，因为混合模型偶尔会引入伪影。一个我常用的配方：Realistic Vision（0.6）+ DreamShaper（0.4），出图既有真实感又有奇幻感。</p>
+
+<h2>ControlNet让你指哪打哪</h2>
+
+<p>如果你还在靠文字硬控姿势，试试ControlNet。它就像给AI一个“蓝图”。最实用的几个模块：</p>
+<ul>
+<li><strong>OpenPose</strong>：上传一张姿势图，AI会严格按那个动作生成，画人体动态必备。</li>
+<li><strong>Canny</strong>：边缘检测，适合抠出物体的轮廓，比如想画一只猫摆在特定位置。</li>
+<li><strong>Depth</strong>：深度图，控制前后景层次，拍风景照时用。</li>
+</ul>
+<p>使用技巧：先找一张参考图（比如网上随便找的姿势），在ControlNet里选对应模型，权重（Weight）设为0.8-1.0，然后写你的提示词。注意：ControlNet不是万能的，如果权重太高会让画面僵硬，建议搭配0.3-0.5的重绘幅度微调。</p>
+
+<h2>图生图的妙用——基于图片修改或重绘</h2>
+
+<p>不想从零开始？把一张现有图片丢进img2img，就是图生图。最经典的用法：<strong>线稿上色</strong>。把黑白线稿放进去，提示词写“colorful anime style”，重绘幅度设0.6-0.8，就能自动填色。另一个场景：想给照片换成不同风格？比如一张真实照片，用0.4重绘幅度加“watercolor style”提示词，就能变成水彩画。记得降低CFG Scale到6-7，避免AI过度修改。</p>
+
+<h2>批量生成与种子锁——找灵感的好方法</h2>
+
+<p>想要很多不同风格的图来筛选？用批量生成（Batch Count和Batch Size）。但更重要的是<strong>锁定种子（Seed）</strong>。当你发现一张图很喜欢，记下它的种子，然后只改负面提示词或CFG Scale，就能精准优化同一张构图。具体操：生成时启用“Random”然后记下种子，之后在相同提示词下固定种子，微调参数，你会发现AI每次都会生成类似但更优的结果。如果想探索新风格，那就放开种子，让AI“随机”发挥。</p>
+
+<p>最后想说，Stable Diffusion没有万能参数，上面这些技巧都是工具。关键是多试：同一个提示词，换不同采样器、不同CFG，甚至不同种子，结果天差地别。建议你每次只改一个变量，对比出图，慢慢就会形成自己的调参直觉。别怕出烂图，每张烂图都在帮你排除错误选项。快去试试吧！</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0234-2026年StableDiffusion.html">2026年StableDiffusion教程：235篇</a></li>
+<li><a href="/pages/articles/0027-AI图片处理工具PS替代方案.html">AI图片处理工具PS替代方案</a></li>
+<li><a href="/pages/articles/0332-2026年Midjourney技巧334.html">2026年Midjourney技巧：334篇</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

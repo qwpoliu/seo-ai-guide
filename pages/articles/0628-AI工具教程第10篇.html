@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具教程第10篇 - AI效率指南</title>
+    <meta name="description" content="AI工具教程第10篇 AI工具教程第10篇：用ChatGPT+Notion搭一个“自动写稿流水线” 嗨，朋友们！今天咱们来聊点硬核的——把两个AI工具串起来，搞一个“自动写稿流水线”。你没听错，就是那种你给个选题，ChatGPT帮你写好草稿...">
+    <meta name="keywords" content="AI工具,AI教程,AI写作,AI工具教程第10篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0628-AI工具教程第10篇.html">
+    <meta property="og:title" content="AI工具教程第10篇">
+    <meta property="og:description" content="AI工具教程第10篇 AI工具教程第10篇：用ChatGPT+Notion搭一个“自动写稿流水线” 嗨，朋友们！今天咱们来聊点硬核的——把两个AI工具串起来，搞一个“自动写稿流水线”。你没听错，就是那种你给个选题，ChatGPT帮你写好草稿...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0628-AI工具教程第10篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI工具教程第10篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "AI工具教程第10篇 AI工具教程第10篇：用ChatGPT+Notion搭一个“自动写稿流水线” 嗨，朋友们！今天咱们来聊点硬核的——把两个AI工具串起来，搞一个“自动写稿流水线”。你没听错，就是那",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0628-AI工具教程第10篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI写作</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>AI工具教程第10篇</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>嗨，朋友们！今天咱们来聊点硬核的——把两个AI工具串起来，搞一个“自动写稿流水线”。你没听错，就是那种你给个选题，ChatGPT帮你写好草稿，Notion自动帮你排版、归档，连封面图都能顺带生成。这一套组合拳打下来，一天输出10篇公众号文章不是梦。废话不多说，直接上干货。</p>
+
+<h2>为什么要搭流水线？</h2>
+
+<p>先说说痛点。很多人用AI写文章，流程是这样的：打开ChatGPT→输入提示词→复制文字→粘贴到Word/Notion→手动调格式→找图→发布。一顿操作猛如虎，一看时间两小时。效率呢？被中间的手动环节吃掉了。</p>
+
+<p>我们要做的就是把“复制粘贴”这个动作省掉，让ChatGPT输出的内容自动流进Notion，并且按预设的模板排好版。你只需要坐在那儿，选选题、点确认，剩下的全自动。</p>
+
+<h2>第一步：在Notion里搭一个“写作数据库”</h2>
+
+<p>打开你的Notion，新建一个页面，然后创建一个Database（数据库）。建议选Table视图。字段设置如下：</p>
+
+<ul>
+<li><strong>标题</strong>（属性类型：Title）——放文章标题</li>
+<li><strong>状态</strong>（Select类型）——下拉选项：待写、已生成、已发布</li>
+<li><strong>选题说明</strong>（Text类型）——写清楚文章要写给谁看、核心卖点是什么</li>
+<li><strong>正文</strong>（Text类型）——这个字段用来接收AI生成的内容</li>
+<li><strong>关键词</strong>（Multi-select）——SEO关键词</li>
+<li><strong>封面提示词</strong>（Text）——给AI绘画工具用的</li>
+</ul>
+
+<p>建好之后，在Notion里添加一个“待写”状态的记录，输入选题说明和关键词。这就是我们的“原料”。</p>
+
+<h2>第二步：用Make（原Integromat）连接ChatGPT和Notion</h2>
+
+<p>这里需要一个自动化工具，推荐Make（免费版每天能跑1000次操作，足够个人用）。注册登录后，创建一个新的Scenario（场景）。</p>
+
+<h3>设置触发器：Notion新增记录</h3>
+
+<p>添加第一个模块，选择Notion → Watch Database Items。选择你刚才建的数据库，触发器条件设为“当状态等于待写时”。这样只要你在Notion里把一条记录设为“待写”，Make就会立刻启动。</p>
+
+<h3>添加ChatGPT模块</h3>
+
+<p>在Notion模块后面加一个OpenAI模块，选择Create Completion。模型用GPT-4o或者GPT-4-turbo，温度调低一点（0.3-0.5），这样输出更稳定。重点来了——提示词怎么写？</p>
+
+<p>我不是让你写“写一篇关于XX的文章”，而是要用Notion里的字段动态填进去。在提示词框里，点击右侧的“插入变量”，选择Notion模块输出的对应字段。这样你的提示词可以写成：</p>
+
+<p>```text</p>
+<p>你是一个资深新媒体编辑。请根据以下要求写一篇2000字左右的公众号文章：</p>
+<p>题目：{标题}</p>
+<p>核心卖点：{选题说明}</p>
+<p>关键词：{关键词}</p>
+<p>要求：开头要有吸引力，用小标题分隔段落，语言口语化，结尾要有互动引导。</p>
+<p>```</p>
+
+<p>注意，这里的{标题}、{选题说明}是Make自动从Notion读取的。每次新增记录，提示词都会自动代入。</p>
+
+<h3>设置输出写入Notion</h3>
+
+<p>再添加一个Notion模块，选择Update Database Item。让它把你当前这条记录的“正文”字段更新为ChatGPT输出的内容。同时，把“状态”字段改为“已生成”。搞定！</p>
+
+<p>测试一下：去Notion新建一个记录，状态选“待写”，填上选题“如何用AI做简历”，关键词“AI简历、求职技巧”。几秒钟后，刷新Notion，你会发现“正文”字段已经塞满了文章，“状态”自动变成了“已生成”。</p>
+
+<h2>第三步：给文章配图（可选进阶）</h2>
+
+<p>如果你还想自动配图，可以在ChatGPT模块后面再加一个DALL·E或者Midjourney的模块。比如用DALL·E，提示词就用Notion里“封面提示词”字段的内容。生成的图片URL再写回Notion的某个文件字段。这样一篇带图文的完整文章就自动准备好了。</p>
+
+<p>不过注意，Midjourney需要手动通过Discord或者API，设置稍微复杂一点。新手可以先不加图，等习惯了这个流程再升级。</p>
+
+<h2>第四步：用Notion的模板一键排版</h2>
+
+<p>文章内容进来了，但格式可能还是纯文本。别急，Notion有个强大的功能——<strong>模板按钮</strong>。在数据库页面新建一个“模板”，预设好H2标题样式、引用块、列表、加粗等。然后每次新文章来了，只需要点一下“应用模板”，几秒就排好了。</p>
+
+<p>如果你连这一步都想自动化，可以用Make再写一个“格式化”场景：读取“已生成”状态的记录，然后调用Notion的API给页面添加各种块（block）元素。但这需要懂一点JSON，不推荐新手搞，手动点一下模板按钮已经很香了。</p>
+
+<h2>实战效果：一天10篇文章</h2>
+
+<p>我自己的用法是：每天晚上花10分钟，把第二天的选题填进Notion，状态都设为“待写”。Make跑一宿（大概每篇文章需要30秒到1分钟），第二天打开Notion，10篇高质量初稿已经乖乖躺在里面。我只需要花20分钟每篇改改、润色、加入自己的观点和案例，然后直接发布。</p>
+
+<p>比起以前从头写一篇要1小时，效率提升了至少3倍。而且因为AI第一次生成的内容已经符合结构要求，修改起来非常轻松。</p>
+
+<h2>几个避坑指南</h2>
+
+<p>1. <strong>提示词要写清楚目标读者</strong>。别说“写篇文章给所有人看”，AI会给出四不像。明确写“写给30岁职场女性看”“写给刚创业的老板看”，效果天差地别。</p>
+<p>2. <strong>OpenAI的API密钥要保护好</strong>。别把密钥直接写在教程里，更别上传GitHub。用环境变量或者Make的密钥管理功能。</p>
+<p>3. <strong>数据库字段名称别用中文空格</strong>。直接用英文（如title、status、body），避免Make读取时出编码问题。</p>
+<p>4. <strong>先跑一条测试</strong>。别一次填10个选题然后开跑，万一提示词写错了，全白费。先跑一条，确认输出满意，再批量丢进去。</p>
+
+<p>好了，今天的“AI工具教程第10篇”就到这里。这套流水线听起来复杂，其实跟着步骤半小时就能搭好。搭完之后你会感谢我的——因为从今往后，写文章的体力活全交给AI和自动化，你只需要做那个“出点子”的人。</p>
+
+<p>赶紧去试试吧！有任何问题，评论区留言，我看到就回。下一篇咱们聊聊怎么用AI做小红书爆款笔记，保证更实用。</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0644-AI工具教程第26篇.html">AI工具教程第26篇</a></li>
+<li><a href="/pages/articles/0072-2026年DeepL教程从入门到精通.html">2026年DeepL教程：从入门到精通</a></li>
+<li><a href="/pages/articles/0311-AI工具推荐第311篇.html">AI工具推荐第311篇</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

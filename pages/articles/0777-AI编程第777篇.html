@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI编程第777篇 - AI效率指南</title>
+    <meta name="description" content="AI编程第777篇 AI编程第777篇：我用AI写代码的真实感受，这些坑别踩 大家好，我是你们的老朋友。今天这篇是AI编程系列的第777篇，说实话，能写到这个数字我自己都挺意外的。从最初被ChatGPT惊艳到，到现在每天靠Copilot、C...">
+    <meta name="keywords" content="AI工具,AI教程,AI编程,AI编程第777篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0777-AI编程第777篇.html">
+    <meta property="og:title" content="AI编程第777篇">
+    <meta property="og:description" content="AI编程第777篇 AI编程第777篇：我用AI写代码的真实感受，这些坑别踩 大家好，我是你们的老朋友。今天这篇是AI编程系列的第777篇，说实话，能写到这个数字我自己都挺意外的。从最初被ChatGPT惊艳到，到现在每天靠Copilot、C...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0777-AI编程第777篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI编程第777篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "AI编程第777篇 AI编程第777篇：我用AI写代码的真实感受，这些坑别踩 大家好，我是你们的老朋友。今天这篇是AI编程系列的第777篇，说实话，能写到这个数字我自己都挺意外的。从最初被ChatGP",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0777-AI编程第777篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI编程</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>AI编程第777篇</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>大家好，我是你们的老朋友。今天这篇是AI编程系列的第777篇，说实话，能写到这个数字我自己都挺意外的。从最初被ChatGPT惊艳到，到现在每天靠Copilot、Cursor、Claude这些工具干活，AI编程已经彻底改变了我的工作流。但我要说的是——<strong>AI不是神仙，用不好反而添乱</strong>。今天我把踩过的坑、总结的套路全盘托出，希望对你有帮助。</p>
+
+<h2>AI编程到底能帮我们省多少时间？</h2>
+
+<p>先讲个真实案例。上周我接了个小项目，要写一个从PDF里提取表格数据并转成Excel的脚本。要是以前，我至少得花半天查库、调格式、处理乱码。这次我直接对Claude说：“写个Python脚本，用pdfplumber提取PDF中的表格，如果表格有合并单元格，自动填充空值，最后输出xlsx。”不到30秒，代码出来了，运行一遍，改了两处参数，总共不到20分钟搞定。</p>
+
+<p>但别高兴太早——同样的事，如果描述不清楚，AI可能会给你一个“能跑但完全跑不通”的代码。<strong>关键不在于AI强不强，而在于你会不会问</strong>。</p>
+
+<h2>小标题一：给AI下指令，千万别“太客气”</h2>
+
+<p>很多人用AI写代码喜欢说：“请帮我写一个爬虫，谢谢。”然后AI给你一个requests+BeautifulSoup的模板，根本不管你是不是要处理反爬、要不要用异步、目标网站是不是动态渲染。结果你跑完报错，又得来回补对话。</p>
+
+<p><strong>我的经验是：一次性把上下文说透。</strong> 比如：“我需要爬取某电商的商品列表页，页面是JS渲染的，使用Selenium，限制每分钟请求不超过20次，输出CSV，字段包括标题、价格、评论数。”这样AI一次就能给出接近可用的代码，省去来回调教的痛苦。</p>
+
+<h2>小标题二：别迷信AI的“完美代码”，它也会挖坑</h2>
+
+<p>我见过最坑的一次，是AI写了一个处理时间序列的脚本，逻辑完全正确，但它在循环里用了`pandas`的`iterrows()`，处理10万行数据跑了一分多钟。这种性能问题AI很少主动提醒你，因为它只关心“能不能跑通”，不关心“跑得快不快”。</p>
+
+<p><strong>我的对策是：拿到代码先问一句“这段代码性能瓶颈在哪？如何优化？”</strong> 让AI自己给你分析，比如建议用向量化操作代替循环、用多线程处理I/O任务。另外，务必在本地用小数据量测试，千万别在生产环境直接跑AI给的代码——尤其是涉及到文件删除、数据库写入的操作。</p>
+
+<h2>小标题三：AI编程的“黄金搭档”是调试能力</h2>
+
+<p>坦白讲，AI写出来的代码第一次跑通率大概只有60%。剩下40%要么是语法错误（比如少了个冒号），要么是逻辑bug（比如边界条件没处理）。这时候最考验你的不是AI，而是你<strong>定位问题</strong>的能力。</p>
+
+<p>我常用的套路：直接把报错信息复制给AI，说“这个报错是什么原因？修一下”。大部分情况下它能秒回解决方案。但有些深层的逻辑错误，比如`if-else`顺序不对、变量作用域混淆，AI有时候也看不出来。这时候我会把代码分段喂给它，让它一行行解释，往往能发现猫腻。</p>
+
+<h2>小标题四：哪些编程场景AI真的不行？</h2>
+
+<p>虽然AI很强，但以下三个场景我强烈建议你亲自写：</p>
+
+<p>1. <strong>涉及公司核心业务逻辑的算法</strong>——比如推荐系统里的排序公式、交易系统的风控规则。AI可能会泄露你的代码片段到云端，而且它理解不了业务背后的“潜规则”。</p>
+<p>2. <strong>极低层级的优化</strong>——比如C语言的指针操作、嵌入式系统的寄存器配置。AI生成的代码往往过于“通用”，缺乏对硬件的针对性。</p>
+<p>3. <strong>完全没参考资料的冷门框架</strong>——AI的训练数据截止于某个时间点，如果你用刚发布一个月的新库，它大概率会写出不存在的API，让你查半天文档才发现是幻觉。</p>
+
+<h2>总结：AI编程的正确姿势</h2>
+
+<p>这第777篇AI编程文章，我想传达的核心就一句话：<strong>把AI当成一个“会说话的实习生”，而不是全知全能的超人</strong>。你需要给它清晰的需求、检查它的产出、并且替它兜底。</p>
+
+<p>现在的我，80%的重复性代码都交给AI写，剩下的20%用来做设计、调试和测试。效率至少翻了三倍。希望我的这些真实经历能让你少走弯路。如果觉得有用，欢迎在评论区聊聊你自己的AI编程翻车故事——咱们下一篇见。</p>
+
+<p>（正文完，字数约830字）</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0271-2026年Cursor评测272篇.html">2026年Cursor评测：272篇</a></li>
+<li><a href="/pages/articles/0030-GitHubCopilot进阶使用技巧.html">GitHub Copilot进阶使用技巧</a></li>
+<li><a href="/pages/articles/0124-Codeium实测体验报告.html">Codeium实测体验报告</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

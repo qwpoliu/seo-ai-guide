@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年Stable Diffusion教程：从入门到精通 - AI效率指南</title>
+    <meta name="description" content="2026年Stable Diffusion教程：从入门到精通 2026年Stable Diffusion教程：从入门到精通 大家好，我是老张。2026年了，Stable Diffusion早就不是那个“高不可攀”的AI绘画工具了。这一两年，...">
+    <meta name="keywords" content="AI工具,AI教程,AI图像,2026年Stable Diffusio">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0032-2026年StableDiffusion.html">
+    <meta property="og:title" content="2026年Stable Diffusion教程：从入门到精通">
+    <meta property="og:description" content="2026年Stable Diffusion教程：从入门到精通 2026年Stable Diffusion教程：从入门到精通 大家好，我是老张。2026年了，Stable Diffusion早就不是那个“高不可攀”的AI绘画工具了。这一两年，...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0032-2026年StableDiffusion.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026年Stable Diffusion教程：从入门到精通",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "2026年Stable Diffusion教程：从入门到精通 2026年Stable Diffusion教程：从入门到精通 大家好，我是老张。2026年了，Stable Diffusion早就不是那个",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0032-2026年StableDiffusion.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI图像</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>2026年Stable Diffusion教程：从入门到精通</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>大家好，我是老张。2026年了，Stable Diffusion早就不是那个“高不可攀”的AI绘画工具了。这一两年，开源社区和各大模型团队把SD玩出了花——SD3、FLUX、各种LoRA、ControlNet更新了好几代。今天这篇教程，我尽量用最口语化的方式，带你从零基础一路走到能出商单级作品的程度。不废话，直接开干。</p>
+
+<h2>第一步：2026年该装什么？别再装老旧版本了</h2>
+
+<p>很多人一上来就去下什么SD1.5，我说句实在话：2026年还死磕1.5，除非你有特殊需求（比如训练某些特定风格的老模型），否则赶紧升级。</p>
+
+<p><strong>推荐两套组合拳：</strong></p>
+
+<ul>
+<li><strong>本地运行</strong>：用ComfyUI。2026年的ComfyUI已经比几年前完善太多，以前觉得A1111简单，现在ComfyUI工作流节点拖拽生成，质量高、速度快。下载最新版（记得去GitHub官方repo，别去第三方流氓网站）。</li>
+<li><strong>云端备选</strong>：如果你显卡不行（比如还在用1060），直接用国内或海外的在线平台，比如Replicate、RunPod，或者国内的阿里云DSW等。现在很多平台支持按秒计费，一张图几分钱。</li>
+</ul>
+
+<p><strong>硬件最低要求</strong>：显存4GB以上（能跑SDXL Lite或者小模型），想玩SD3或FLUX基础版至少8GB，推荐12GB+。</p>
+
+<p>安装方法：下载ComfyUI整合包（很多大佬打包的，解压即用），双击run_nvidia_gpu.bat（Windows），等命令行跑完，浏览器弹出界面就成功了。</p>
+
+<h2>第二步：提示词怎么写？别再背“魔法公式”了</h2>
+
+<p>很多人都被网上那些“极端复杂”的提示词吓到了，什么“masterpiece, best quality, 8k, photorealistic, intricate details...”。2026年，这些垃圾词大部分可以扔掉。</p>
+
+<p><strong>核心就三点：</strong></p>
+
+<p>1. <strong>主体先行</strong>：直接告诉AI你要画什么。比如“a golden retriever wearing a chef hat, cooking in a kitchen”。别绕弯子。</p>
+<p>2. <strong>风格锚定</strong>：想要照片感就加“photograph, shot on Canon EOS R5, 85mm lens, soft lighting”，想要二次元就加“anime style, by Makoto Shinkai, cel shaded”。推荐直接用模型自带的风格提示词（很多模型训练时已经包含风格，不需要额外堆砌）。</p>
+<p>3. <strong>负面提示词精简</strong>：不用写几百字，最常用就这几个——“worst quality, low quality, ugly, extra limbs, blurry, watermark”。如果生成人物，加上“bad anatomy, deformed hands”。</p>
+
+<p><strong>2026年提示词新技巧</strong>：很多模型支持“自然语言”，你直接用中文写一段描述都行（比如“傍晚海边，一个穿红色连衣裙的女孩在跑步，夕阳照在她脸上”），精度比两年前高太多了。不过为了稳定，建议中英混合或全英，因为训练数据还是英文为主。</p>
+
+<h2>第三步：模型选择——别只看“大”</h2>
+
+<p>2026年模型多到眼花缭乱。我按用途帮你分类：</p>
+
+<ul>
+<li><strong>写实摄影</strong>：首选SD3.5 Medium或FLUX.1-dev（开源版）。FLUX在光影、皮肤质感上真的是断层领先，哪怕细节控也挑不出毛病。</li>
+<li><strong>二次元/插画</strong>：推荐最新版的NovelAI v4或者基于SD3的AnimeMix。注意：很多二次元模型对“手部”优化极好，基本不用额外修复。</li>
+<li><strong>设计/概念图</strong>：用SDXL精调版（比如DreamShaper XL），泛化能力强，适合抽象创意。</li>
+<li><strong>低配显卡</strong>：用SD3.5 Small或LCM（实时生成）模型，出图速度飞快，质量也够日常用。</li>
+</ul>
+
+<p><strong>怎么换模型？</strong> ComfyUI里有个“Load Checkpoint”节点，点一下选择你下载的.safetensors文件即可。模型下载推荐去Civitai（2026年依然是最大模型库），按下载量、评分排序就行。</p>
+
+<h2>第四步：ControlNet——你离“指哪打哪”就差这一步</h2>
+
+<p>很多人画了几个月，发现AI总是不听指令：让他举左手偏举右手，让他穿蓝色裙子偏给你红色。这时候ControlNet就是你的救星。</p>
+
+<p><strong>2026年必装的几个ControlNet：</strong></p>
+
+<ul>
+<li><strong>Canny（边缘检测）</strong>：上传一张草图，AI会严格按你的线条上色填充。适合控制构图。</li>
+<li><strong>Depth（深度图）</strong>：用来控制场景的远近透视，比如你要在某个角度画一个房间，用深度图锁定空间关系。</li>
+<li><strong>OpenPose（姿态控制）</strong>：最常用！上传一张人物姿势图，AI生成的人物动作会一模一样。2026年新版OpenPose已经能识别手指弯曲了，画手废的福音。</li>
+<li><strong>IP-Adapter（图像风格迁移）</strong>：上传一张参考图，AI会学习它的色彩和风格，但内容变成你想要的。比如你想把一张风景图变成梵高风格，用IP-Adapter最稳。</li>
+</ul>
+
+<p><strong>操作很简单：</strong> 在ComfyUI里加一个ControlNet Loader节点，连接到你的模型，再导入控制图片和选择类型。新手建议直接找别人做好的工作流（Civitai或Discord社区有大把），拖进去改改就行了。</p>
+
+<h2>第五步：进阶玩法——LoRA、LoRA权重、多模型混合</h2>
+
+<p>当你基础没问题后，想做出自己的风格，就得玩LoRA（低秩适配）了。</p>
+
+<p><strong>LoRA是什么？</strong> 你可以理解为给AI打了“小补丁”。比如你想画某位明星的脸，或者某种特定的机甲风格，下载一个对应LoRA，加载后AI就秒懂那个特征。</p>
+
+<p><strong>怎么用：</strong> ComfyUI里加一个Load LoRA节点，选你的LoRA文件，调权重（一般0.5-0.8）。权重太高会过拟合（比如人脸变形），太低没效果，慢慢试。</p>
+
+<p><strong>2026年新趋势：</strong> 多LoRA叠加。比如同时加载“人脸LoRA”+“衣服LoRA”+“光影LoRA”，权重各自调低一点，生成效果出奇的好。但注意：LoRA之间会打架，建议先叠加两个，测试稳定再加第三个。</p>
+
+<p><strong>还有一个神器：LoRA Block Weight</strong>。不同LoRA对模型的不同层（风格层、内容层、细节层）影响不同，2026年的ComfyUI已经支持手动调整每个层的权重，大神级玩法。新手暂时不用管，知道有这东西就好。</p>
+
+<h2>第六步：出图后的修修补补——2026年节省大量时间</h2>
+
+<p>以前出图后要进Photoshop修手、改色、抠图，现在AI就能搞定。</p>
+
+<ul>
+<li><strong>AI放大</strong>：ComfyUI内置Ultimate SD Upscale节点，直接用4x放大，细节不糊。或者用外挂的Tile ControlNet，先分块放大再拼接，适合大输出。</li>
+<li><strong>局部重绘</strong>：ComfyUI有“Inpaint”工作流。比如你画的人脸上痘痘，用笔刷涂掉，AI自动补皮肤。2026年很多模型自带高精度inpaint，不需要单独下载。</li>
+<li><strong>消除背景</strong>：直接用“Remove Background”节点，一键去底，比PS快三倍。</li>
+<li><strong>视频转绘</strong>：2026年Stable Video Diffusion已经很成熟，你可以把一段视频逐帧转成AI风格，甚至能用ControlNet保持人物一致性。教程太长不展开，有兴趣去搜“ComfyUI视频转绘工作流”。</li>
+</ul>
+
+<h2>第七步：避坑指南——新手最容易翻的几个车</h2>
+
+<p>1. <strong>千万别用满分辨率</strong>：显存不够就崩。先从512x512或512x768开始，确认构图没问题再用高清放大。</p>
+<p>2. <strong>采样器别乱选</strong>：新手推荐Euler a或DPM++ 2M Karras。那些什么DDIM、PLMS都是老黄历了，速度慢还容易崩。</p>
+<p>3. <strong>CFG（提示词强度）默认7就行</strong>。太低AI自由发挥，太高画风僵硬。个别模型可以调到3-5（比如FLUX）。</p>
+<p>4. <strong>Civitai下载模型注意版本</strong>：有些模型有“fp16”和“fp32”之分，新手下载fp16，体积小、兼容好。还有注意是checkpoint还是LoRA，别放错文件夹。</p>
+
+<h2>最后说点心里话</h2>
+
+<p>2026年了，学Stable Diffusion真的不难。难的是你愿不愿意动手。别光收藏教程，现在就打开软件，随便输几个词，调一调参数，跑一张图出来。哪怕第一张是四不像，没关系，调整提示词，换个模型，再用ControlNet修正一下，第二张就能看。</p>
+
+<p>AI绘画这东西，本质上就是“折腾—改进—再折腾”的循环。你折腾的次数越多，你对线条、色彩、光影的理解就越深。到那时，你不是在“用AI”，而是在“和AI合作”。</p>
+
+<p>好了，教程到此结束。记得关注我，下期我们聊聊怎么用AI做短视频分镜。有问题评论区留言，看到就回。</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0364-AI教程第364篇.html">AI教程第364篇</a></li>
+<li><a href="/pages/articles/0046-AI二维码生成器推荐.html">AI二维码生成器推荐</a></li>
+<li><a href="/pages/articles/0379-AI教程第379篇.html">AI教程第379篇</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI编程第857篇 - AI效率指南</title>
+    <meta name="description" content="AI编程第857篇 AI编程第857篇：我用AI写代码这半年，踩过的坑和真香时刻 大家好，我是老王，一个干了十年后端的老程序员。最近半年，我几乎每天都在用AI写代码，GitHub Copilot、Cursor、通义灵码换着用，自认为算是“重...">
+    <meta name="keywords" content="AI工具,AI教程,AI编程,AI编程第857篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0857-AI编程第857篇.html">
+    <meta property="og:title" content="AI编程第857篇">
+    <meta property="og:description" content="AI编程第857篇 AI编程第857篇：我用AI写代码这半年，踩过的坑和真香时刻 大家好，我是老王，一个干了十年后端的老程序员。最近半年，我几乎每天都在用AI写代码，GitHub Copilot、Cursor、通义灵码换着用，自认为算是“重...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0857-AI编程第857篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI编程第857篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "AI编程第857篇 AI编程第857篇：我用AI写代码这半年，踩过的坑和真香时刻 大家好，我是老王，一个干了十年后端的老程序员。最近半年，我几乎每天都在用AI写代码，GitHub Copilot、Cu",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0857-AI编程第857篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI编程</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>AI编程第857篇</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>大家好，我是老王，一个干了十年后端的老程序员。最近半年，我几乎每天都在用AI写代码，GitHub Copilot、Cursor、通义灵码换着用，自认为算是“重度用户”了。今天这篇第857篇，不扯高大上的理论，就聊聊我踩过的坑和那些真香时刻，希望对刚入坑的朋友有点帮助。</p>
+
+<h2>你以为是“自动写代码”？其实它是“自动生成注释”</h2>
+
+<p>刚开始用AI编程的时候，我特别兴奋——只要写个函数名，后面代码自动补全，感觉马上要失业了。结果第一天就翻车了：我让它写一个“把用户订单按时间排序”的函数，它直接给我生成了200行，用了四个嵌套循环，还自己定义了一个排序算法。我一看，效率还不如最基础的冒泡排序。后来我明白了，AI不是“写代码”，而是“猜代码”。它根据上下文和你的注释猜你要什么，但猜对了是惊喜，猜错了就是灾难。</p>
+
+<p><strong>坑一：别让AI替你设计逻辑，让它替你写实现。</strong> 现在我的习惯是：先自己画好流程图、定好接口，把注释写得清清楚楚，比如“// 从数据库获取用户列表，按注册时间降序，取前100条”，然后让AI生成具体的SQL和对象映射。这样准确率直接翻倍。</p>
+
+<h2>小标题：AI调试比你自己调试还靠谱？真的</h2>
+
+<p>以前改Bug靠printf大法和脑补，现在我会把报错信息+相关代码段直接扔给AI。有一次遇到一个诡异的空指针，我在代码里翻了半个小时没找到原因。复制给Claude，它三秒钟就指出：是因为你用了Java8的Optional，但没处理嵌套的flatMap返回空的情况。我一看，真是。AI读代码的能力其实远超大部分初级程序员，因为它脑子里装着几十万行开源项目的模式。</p>
+
+<p><strong>真香时刻：</strong> 现在遇到编译错误，我先把错误信息粘贴给AI，让它解释原因，再让它给出两种修改方案。80%的情况下直接复制就能跑通。剩下20%需要微调，但至少节省了我一半的排查时间。</p>
+
+<h2>小标题：别把AI当“代码生成器”，要当“代码审查员”</h2>
+
+<p>很多人觉得AI就是帮你写完整个模块，我不这么看。我现在的常用姿势是：自己写完一段逻辑，让AI审查。比如我写了个多线程处理的代码，让它检查有没有死锁风险，或者有没有忘记关闭连接。AI会给出类似“建议使用try-with-resources”或者“这里的锁范围可以缩小”这样的建议。这种“二次审查”的准确率相当高，比我自己检查细多了。</p>
+
+<p><strong>坑二：不要完全相信AI的安全性建议。</strong> 有一次它建议我直接把用户输入拼接到SQL里，说“这种方式简单”。你想想，如果真信了，那就是SQL注入。所以安全相关的逻辑，必须自己把关，AI目前还没那个觉悟。</p>
+
+<h2>小标题：AI编程的未来，其实是“结对编程”</h2>
+
+<p>我现在和AI的关系，就像和一个刚毕业但记忆力超强的实习生。它写代码快，但不懂业务，没有上下文。我指挥它，它执行，然后我检查。工作效率提升很明显，以前一周的活现在三天能搞完。但代价是：我得花更多时间在“思考”和“审核”上，而不是“敲代码”。说白了，程序员的价值正在从“码字能力”转向“设计能力和判断力”。</p>
+
+<p>最后说一句：别怕被替代。AI编程工具越强，能解决实际问题的人就越稀缺。如果你只是会写if-else，那确实危险；但如果你懂架构、懂业务、懂怎么把AI当骡子使，那你只会更值钱。</p>
+
+<p>今天这第857篇，算是我自己的一个记录。下回再聊聊怎么用AI写单元测试，那才是真·神器。</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0126-Codeium对比测评哪个更适合你.html">Codeium对比测评：哪个更适合你</a></li>
+<li><a href="/pages/articles/0042-AI编程入门完全指南2026.html">AI编程入门完全指南2026</a></li>
+<li><a href="/pages/articles/0045-AI云端IDE对比CodeSandbox.html">AI云端IDE对比CodeSandbox vs Replit</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

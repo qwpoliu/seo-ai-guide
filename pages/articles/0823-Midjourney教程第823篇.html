@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjourney教程第823篇 - AI效率指南</title>
+    <meta name="description" content="Midjourney教程第823篇 Midjourney教程第823篇：用“风格参考”一键复刻大师级画风 嗨，朋友们！又到了咱们的Midjourney小课堂时间。今天这篇是第823篇，我猜你肯定遇到过这种情况：看到一张特别喜欢的图，想模仿它...">
+    <meta name="keywords" content="AI工具,AI教程,AI图像,Midjourney教程第823篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0823-Midjourney教程第823篇.html">
+    <meta property="og:title" content="Midjourney教程第823篇">
+    <meta property="og:description" content="Midjourney教程第823篇 Midjourney教程第823篇：用“风格参考”一键复刻大师级画风 嗨，朋友们！又到了咱们的Midjourney小课堂时间。今天这篇是第823篇，我猜你肯定遇到过这种情况：看到一张特别喜欢的图，想模仿它...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0823-Midjourney教程第823篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Midjourney教程第823篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "Midjourney教程第823篇 Midjourney教程第823篇：用“风格参考”一键复刻大师级画风 嗨，朋友们！又到了咱们的Midjourney小课堂时间。今天这篇是第823篇，我猜你肯定遇到过",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0823-Midjourney教程第823篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI图像</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>Midjourney教程第823篇</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>嗨，朋友们！又到了咱们的Midjourney小课堂时间。今天这篇是第823篇，我猜你肯定遇到过这种情况：看到一张特别喜欢的图，想模仿它的配色、光影、笔触，结果自己生出来的图总差那么点意思。别急，今天咱就聊聊Midjourney里一个超级实用的功能——<strong>风格参考（Style Reference）</strong>，也就是 `--sref` 参数。这玩意儿能让你直接把某张图的“灵魂”抽出来，贴到你自己的创作上，堪称“画风盗摄器”。</p>
+
+<h2>啥是风格参考？跟“垫图”有啥区别？</h2>
+
+<p>很多老铁容易把“风格参考”和“图像提示（垫图）”搞混。简单说：</p>
+
+<ul>
+<li><strong>垫图（Image Prompt）</strong>：把一张图作为种子喂给MJ，希望它模仿构图、主体甚至物体。比如你放一张猫的照片，MJ会生成一只类似姿势的猫，但可能换材质。</li>
+<li><strong>风格参考（--sref）</strong>：只偷学这张图的“气质”——颜色、光影、纹理、笔触风格，但主体和构图完全由你的Prompt决定。比如你放一张莫奈的睡莲，再写“一只钢铁机器人”，结果机器人就会带有印象派那种朦胧的笔触和柔和色调。</li>
+</ul>
+
+<p><strong>实战场景</strong>：你想让生成的“赛博朋克城市”拥有梵高《星夜》那种漩涡感，用`--sref` 加上梵高画作的链接，瞬间搞定。</p>
+
+<h2>怎么用？三行代码教会你</h2>
+
+<p>操作贼简单，就三步：</p>
+
+<p>1. <strong>找到参考图</strong>：可以是网上的图片链接，或者你之前MJ生成的图片Seed值（右键→添加反应→信封图标拿Seed）。</p>
+<p>2. <strong>在Prompt末尾加参数</strong>：</p>
+<p>`/imagine prompt: 夕阳下的沙漠古堡 --sref &lt;图片链接或Seed&gt;`</p>
+
+<p>3. <strong>调权重（可选）</strong>：不同风格参考可以叠加。比如你想融合两张图的风格：</p>
+<p>`--sref 链接A 链接B --sw 100 50`</p>
+<p>其中`--sw`（Style Weight）控制每张图的影响力，数字越大影响越强，默认100。</p>
+
+<p><strong>举个栗子</strong>：</p>
+<p>我输入 `prompt: 一只穿着西装的企鹅，站在纽约街头 --sref https://cdn.midjourney.com/xxx.jpg`（参考的是某张复古海报的色调），结果企鹅身上就会自带那种泛黄的老报纸质感，连影子都是偏棕色的。</p>
+
+<h2>小技巧：怎么找到好的风格参考图？</h2>
+
+<ul>
+<li><strong>去艺术史里偷</strong>：梵高、莫奈、葛饰北斋的浮世绘、甚至游戏概念图。把图片链接复制下来（推荐用imgur或直接右键复制图片地址）。</li>
+<li><strong>用MJ自己的图</strong>：之前你满意的作品，右键复制Seed，再生成变体时加上`--sref`，就能在保持精髓的前提下换主体。比如我前一阵生成了一张“机械龙”，今天想用它的金属质感画一朵花，直接`--sref 那个机械龙的Seed`，花就变成金属花瓣了。</li>
+<li><strong>参数组合拳</strong>：`--sref` 可以和 `--stylize`（艺术化程度）、`--v`（版本）一起用。比如 `--v 6.1 --sref 链接 --stylize 300`，效果更炸。</li>
+</ul>
+
+<h2>避坑指南：为什么你的风格参考没反应？</h2>
+
+<p>常见翻车原因有三：</p>
+
+<p>1. <strong>图片太糊或太杂</strong>：参考图里主体太多，风格不统一。最好选构图干净、色彩特征明显的图，比如一张纯色背景下的物体特写。</p>
+<p>2. <strong>权重不对</strong>：有时候`--sw`设得太低（默认100），参考效果就像没开一样。想强化风格可以提高到200甚至300，但小心画面失真。</p>
+<p>3. <strong>版本限制</strong>：`--sref` 在v6及以上版本效果最好，老版本（v5）不支持或效果弱。记得在设置里选 `/settings` 把版本调到6.1。</p>
+
+<h2>高级玩法：风格混合+文字引导</h2>
+
+<p>想玩花活？试试“双重风格参考”加“文字描述”。比如：</p>
+<p>`prompt: 一个玻璃花瓶里的向日葵 --sref 梵高向日葵.jpg 莫奈睡莲.jpg --sw 150 80`</p>
+<p>你会得到一朵既有梵高笔触、又带着莫奈朦胧光晕的向日葵，玻璃花瓶还会反出水面那种柔光。这时候再补一句 `--no 丑陋，畸形` 防止翻车。</p>
+
+<h2>总结一句</h2>
+
+<p>`--sref` 是Midjourney里最被低估的神器之一，尤其适合想做系列作品、统一视觉风格的朋友。下次别再傻傻手调关键词了，直接找张喜欢的图，把它的“味道”偷过来。试一次你就知道有多香！</p>
+
+<p>行了，今天的教程就到这儿。第824篇咱聊聊“怎样用--iw参数让垫图更精准”，记得关注别错过。有问题评论区甩过来，咱们一起折腾。</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/1246-AI工具使用技巧第1246篇.html">AI工具使用技巧第1246篇</a></li>
+<li><a href="/pages/articles/0055-AI网站建设工具对比.html">AI网站建设工具对比</a></li>
+<li><a href="/pages/articles/0771-AI设计第771篇.html">AI设计第771篇</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

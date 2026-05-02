@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjourney教程第783篇 - AI效率指南</title>
+    <meta name="description" content="Midjourney教程第783篇 嘿，各位AI绘画的发烧友们，欢迎来到Midjourney教程第783篇！今天咱们不聊那些花里胡哨的新功能，就死磕一个最容易被忽略、但却是“老司机”必用的参数——种子值（Seed）。你是不是经常遇到这种情况...">
+    <meta name="keywords" content="AI工具,AI教程,AI图像,Midjourney教程第783篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0783-Midjourney教程第783篇.html">
+    <meta property="og:title" content="Midjourney教程第783篇">
+    <meta property="og:description" content="Midjourney教程第783篇 嘿，各位AI绘画的发烧友们，欢迎来到Midjourney教程第783篇！今天咱们不聊那些花里胡哨的新功能，就死磕一个最容易被忽略、但却是“老司机”必用的参数——种子值（Seed）。你是不是经常遇到这种情况...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0783-Midjourney教程第783篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Midjourney教程第783篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "Midjourney教程第783篇 嘿，各位AI绘画的发烧友们，欢迎来到Midjourney教程第783篇！今天咱们不聊那些花里胡哨的新功能，就死磕一个最容易被忽略、但却是“老司机”必用的参数——种子",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0783-Midjourney教程第783篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI图像</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>Midjourney教程第783篇</h1>
+        </header>
+        <div class="article-body">
+
+<p>嘿，各位AI绘画的发烧友们，欢迎来到Midjourney教程第783篇！今天咱们不聊那些花里胡哨的新功能，就死磕一个最容易被忽略、但却是“老司机”必用的参数——种子值（Seed）。你是不是经常遇到这种情况：同样一段提示词，跑出来的图要么构图天翻地覆，要么人物的脸直接换了一个人？想要做一组风格统一的插画，结果每次出的图都像来自不同的画师？别急，今天这篇教程就是专门来治这个病的。</p>
+
+<h2>Seed到底是什么？别把它想得太复杂</h2>
+
+<p>简单说，Seed就像AI脑子里的一个“随机起点”。你给Midjourney一句提示词，它本来的逻辑是在一个无限大的随机数池子里捞出一个数，再根据这个数开始“画画”。如果你不指定Seed，每次捞出来的数都不一样，所以图自然千变万化。但如果你手动指定一个Seed值，比如`--seed 12345`，那AI就会每次都从这个固定的数开始“画画”。<strong>哪怕你稍微改了提示词（比如把“红色帽子”改成“蓝色帽子”），只要Seed不变，AI在构图上、角色的骨架、甚至肤色、光照倾向上都会尽量往第一次的结果靠拢。</strong> 这就是为什么高手能做出一个角色在一系列场景里长相完全统一的效果——秘密全在这个小小的数字上。</p>
+
+<h2>怎么找到一张图的Seed值？两个方法任你选</h2>
+
+<p>方法一：在你刚生成图片的那条消息上，右键或者长按，点“添加反应”，然后找那个像信封一样的emoji（✉️）。点了之后，Midjourney的机器人会私信你一个消息，里面就有整张图的详细信息，包括Job ID和<strong>Seed值</strong>（比如“seed 123456789”）。</p>
+
+<p>方法二：如果你懒得用那个反应，也可以在生成时直接加一个命令。比如不小心关了窗口？没事，回头在Discord的聊天记录里找到那张图，点开它的“详情”或者用`/show`命令加Job ID也能看到。总之，<strong>每次出图你都养成习惯记一下种子</strong>，就像记电话号码一样，以后调图就能少走冤枉路。</p>
+
+<h2>用Seed复现风格——一个实战案例让你秒懂</h2>
+
+<p>假设你跑了一张特别满意的猫咪头像，提示词大概是这样：`a cute orange cat, fluffy fur, soft lighting, portrait --ar 1:1 --v 6`，出来的图你很喜欢，但是猫的耳朵是耷拉着的，你想让它竖起来。这时候如果重新打一遍提示词加一个“ears up”，大概率会生成一只完全不同的猫——颜色、花纹、眼神都对不上了。</p>
+
+<p>正确做法：找到这张图的Seed值，比如654321。然后在新的提示词后面加上`--seed 654321`，并且保留原来的大部分描述，只把`fluffy fur`改成`ears up, fluffy fur`。这时候你再跑一次，你会发现猫的整体轮廓、毛色分布、甚至眼睛的形状都跟原图几乎一样，只是耳朵变成了竖起来的！<strong>这就是Seed的神奇之处——它在AI的“记忆”里锁定了一个稳定骨架，你在这个骨架上做局部修改，效果比从零开始稳定十倍。</strong></p>
+
+<h2>Seed使用的三个常见坑，别踩</h2>
+
+<p>坑一：<strong>不同版本模型Seed不通用</strong>。你在v5.2里喜欢的Seed值，拿到v6里用，效果完全不一样。因为不同版本的模型内部训练逻辑已经变了，同一个种子在不同版本里对应的是不同“起点”。所以如果你切换了模型版本（比如从v5.2切到v6），之前记录的Seed就没用了，需要重新找。</p>
+
+<p>坑二：<strong>修改提示词太多，种子也救不了</strong>。如果你加了太多新内容或者删掉了关键描述，哪怕Seed不变，AI也会因为“指令”变化太大而跑偏。比如你把“orange cat”改成了“black dog”，那肯定不是一个物种了。建议每次只改动一到两个关键词，保持80%以上的提示词不变。</p>
+
+<p>坑三：<strong>不要用--seed -1或者0</strong>。种子值的合法范围是<strong>0到4294967295</strong>（一个非常大的整数），但0其实有特殊的系统含义（有些版本里它代表随机），而且-1根本无效。想用具体数字的话，随便挑一个你喜欢的正整数就行，比如你的生日、电话尾号，都行。</p>
+
+<h2>进阶技巧：用Seed系列生成连续动作</h2>
+
+<p>很多人想做“会动的漫画”或者连贯的角色动画，但苦于无法保持角色一致性。有了Seed，这事就有解了。你选定一个角色，比如一个戴斗笠的武士，先用一个固定的Seed（比如88888）生成一张肖像。然后基于这个底图，写一个系列的动作提示词，比如“running”、“jumping”、“slashing sword”，并且在每条提示词里都带上`--seed 88888`和原图的部分描述（保持发型、服装颜色、面部特征一致）。这样跑出来的每一张图，武士的脸和装扮都是同一个人，只是动作不同。把这些图按顺序拼接成GIF或者视频，就是一套流畅的连续动画了。<strong>搭配Niji模型（二次元风格）效果尤其炸裂</strong>，很多同人插画工作室就是这么批量出图的。</p>
+
+<h2>写在最后</h2>
+
+<p>Seed这个东西，说难不难，说简单也需要多练几次才能找到手感。关键是<strong>养成记种子的习惯</strong>。每次出图让你满意的，就顺手把Seed值复制到备忘录里；不满意的，也记下Seed值，然后修改提示词再跑一遍，对比着看。用不了几次，你就会发现Midjourney从“随机盲盒”变成了“听话的工具”。好了，今天的教程就到这里，赶紧去Discord里试试你的固定种子吧！下期第784篇，咱们聊聊怎么用“负面提示词”精准排除你不想要的东西，不见不散！</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/1270-AI工具使用技巧第1270篇.html">AI工具使用技巧第1270篇</a></li>
+<li><a href="/pages/articles/0054-AI3D建模工具入门教程.html">AI3D建模工具入门教程</a></li>
+<li><a href="/pages/articles/0048-AI家居设计工具推荐.html">AI家居设计工具推荐</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

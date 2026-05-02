@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjourney进阶使用技巧 - AI效率指南</title>
+    <meta name="description" content="Midjourney进阶使用技巧 一、参数玩得转，出图质量翻倍 很多人用Midjourney只会写提示词，但真正拉开差距的其实是那些不起眼的参数。`--ar`（宽高比） 是最基本但最容易出错的——别老用默认正方形。做海报用`--ar 9:1...">
+    <meta name="keywords" content="AI工具,AI教程,AI图像,Midjourney进阶使用技巧">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0039-Midjourney进阶使用技巧.html">
+    <meta property="og:title" content="Midjourney进阶使用技巧">
+    <meta property="og:description" content="Midjourney进阶使用技巧 一、参数玩得转，出图质量翻倍 很多人用Midjourney只会写提示词，但真正拉开差距的其实是那些不起眼的参数。`--ar`（宽高比） 是最基本但最容易出错的——别老用默认正方形。做海报用`--ar 9:1...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0039-Midjourney进阶使用技巧.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Midjourney进阶使用技巧",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "Midjourney进阶使用技巧 一、参数玩得转，出图质量翻倍 很多人用Midjourney只会写提示词，但真正拉开差距的其实是那些不起眼的参数。`--ar`（宽高比） 是最基本但最容易出错的——别老",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0039-Midjourney进阶使用技巧.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI图像</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>Midjourney进阶使用技巧</h1>
+        </header>
+        <div class="article-body">
+
+<h3>一、参数玩得转，出图质量翻倍</h3>
+
+<p>很多人用Midjourney只会写提示词，但真正拉开差距的其实是那些不起眼的参数。<strong>`--ar`（宽高比）</strong> 是最基本但最容易出错的——别老用默认正方形。做海报用`--ar 9:16`，做横版封面用`--ar 16:9`，做故事板用`--ar 2:3`，不同的比例直接改变构图逻辑。</p>
+
+<p><strong>`--s`（风格化）</strong> 是进阶核心。默认值100，但你想让画面更艺术、更抽象、更“Midjourney味”时，拉到300-600甚至800；要写实、要精准还原物体，降到0-50。比如生成“一只猫坐在沙发上”，`--s 0`是冷冰冰的照片，`--s 600`则可能变成梵高风格的油画。</p>
+
+<p><strong>`--c`（混乱）</strong> 是惊喜制造器。数值0-100，值越高，每次生成的4张图差异越大。当你对一个主题失去灵感时，把`--c 50`甚至`--c 100`丢进去，常常能炸出意想不到的构图和配色。但注意：很吃算力，而且容易跑偏，适合找灵感阶段用。</p>
+
+<p><strong>`--iw`（图像权重）</strong> 只有用垫图（image prompt）时才生效。默认0.25，如果你想让参考图对结果的影响更大，调到1.0甚至2.0。比如你想让AI严格模仿一张照片的色调+构图，但换掉主体，就把`--iw 2`加上。</p>
+
+<p><strong>冷门但实用：</strong> `--no`参数。别直接写“没有手”、“不要多余背景”，而是用`--no hands, extra objects`，它能更精准地剔除你不想要的东西。比如生成人物时不想看到咖啡杯，直接在末尾加`--no coffee cup`，效果立竿见影。</p>
+
+<h3>二、垫图用法：别只传一张图</h3>
+
+<p>很多人垫图就是上传一张图片，然后加文字。但真正高阶的玩法是<strong>多图混合</strong>。比如你有一张喜欢的构图和一张喜欢的配色，把两张图都拖进Discord，然后提示词里写：`image1 URL image2 URL a beautiful landscape --iw 1.5 --ar 16:9`。AI会尝试融合两张图的风格，产生独特的结果。</p>
+
+<p><strong>还有一个骚操作：</strong> 用自己拍的渣图做底图。比如你拍了一张曝光不足的夜景，上传后加提示词“professional night photography, cinematic lighting, 8k --iw 2 --s 50”，AI会保留原始建筑轮廓，但把光渲染成大片级效果。这比凭空生成更可控。</p>
+
+<p><strong>注意垫图格式：</strong> 必须用直接图片链接（右键复制图片地址），不能上传到聊天框后直接用附件。如果你用了Discord的图片上传，记得先点击图片打开，再复制地址栏里的URL。很多新手栽在这上面。</p>
+
+<h3>三、Prompt结构：三段式+权重</h3>
+
+<p>别再写长篇大论的一段话了。<strong>三段式结构</strong>是最稳定的：`[主体] + [环境/动作] + [风格/细节]`。比如“一只金毛狗 / 在海滩奔跑 / 阳光透过毛发，湿漉漉的，胶片质感，f/1.8”。这样Midjourney理解顺序清晰，不容易乱加元素。</p>
+
+<p><strong>权重语法</strong>是你的秘密武器。用`::`分割并赋予权重，比如`a dog::2 running on beach::1`，这样AI会优先保证“狗”的准确度，而“沙滩”作为辅助。更细致一点：`a dog with golden fur::1.5 wet nose::0.5`，鼻子会刻意变湿。注意权重可以写小数，甚至负数，但负权重容易翻车，新手慎用。</p>
+
+<p><strong>还有一个常见坑：</strong> 别把多个形容词用逗号堆砌。比如“红色，蓝色，绿色”AI会随机选一个。改成“red and blue gradient”或者用`::`权重明确主次。想生成特定混色，直接说“split tone: warm yellow and cool teal”。</p>
+
+<h3>四、版本选择：V6和Niji的实战场景</h3>
+
+<p>Midjourney V6默认是写实风格，但如果你需要 <strong>动漫、游戏角色、二次元</strong>，直接切到<strong>Niji 6</strong>。Niji对光影和线条的理解完全不同，出图更干净、更有动画感。比如“女战士，铠甲，发光的剑”，V6可能给你一张剧照，Niji则直接生成《最终幻想》级别的立绘。</p>
+
+<p><strong>什么时候用V5.2？</strong> 当你需要极致的细节描述时。V6有时候会过度简化，而V5.2对“斑驳的墙壁、裂缝中长出苔藓、生锈的铁钉”这种具体物体表现更好。另外V5.2的`--tile`（无缝拼接）功能还能做纹理图、背景图，V6的tile效果反而没那么好。</p>
+
+<p><strong>Raw模式</strong>：在V6下加`--style raw`，可以大幅减少AI的“美化”倾向，保留更多原始特征。适合做产品设计、建筑参考、需要精确结构的场景。比如你想看一个椅子的真实比例，不加raw的话AI可能会给椅子加个漂亮曲线，加了raw就老老实实给你画。</p>
+
+<h3>五、Remix模式：改图不重来</h3>
+
+<p>很多人不知道<strong>Remix模式</strong>怎么用。开启方式：在Discord输入`/settings`，找到Remix Mode打开。之后每次点“Vary (Strong)”或者“Vary (Region)”时，弹窗里会允许你修改提示词。</p>
+
+<p><strong>实操案例：</strong> 你生成了4张图，选了一张喜欢的，但觉得构图太满。点“Vary (Strong)”，在弹出的提示框里把原prompt末尾加上“with more negative space, minimal background”。AI会保留前面构图和主体，但把背景变空。这比从头生成快10倍。</p>
+
+<p><strong>局部重绘（Vary Region）</strong> 更强大：选中图的某个区域（比如直接画圈），然后在弹窗里写新的提示词。比如人物脸不够帅，圈住脸，写“handsome man, detailed face, 8K”，别的地方不动。注意：Vary Region只能用V6，而且圈选区域要精确，太大会破坏原有构图。</p>
+
+<h3>六、Seed值：让好图可以复制</h3>
+
+<p>每张图生成后，点添加反应（表情）按钮，输入`envelope`，机器人会私信你这条图的Seed值。<strong>记录下这个数字</strong>。下次你想生成类似构图但换风格时，在prompt后加`--seed 12345`，AI会尽可能保持原图的结构、颜色分布和主体位置，只根据你新的提示词调整细节。</p>
+
+<p>这特别适合做系列图。比如你做了一个角色A，想再做角色B让两个人在同一个场景里，保持一样的视角和光照，就用同一个seed，只改角色描述。但注意：不同版本（V6 vs Niji）的seed不互通，而且你加`--c`高混乱时seed效果会变弱。</p>
+
+<h3>七、批量生成与效率技巧</h3>
+
+<p>别一张张手动点。用<strong>Blend命令</strong>（/blend）可以快速混合两张图。但更高效的是<strong>Parallel Jobs</strong>：如果你是付费用户，在Discord里可以同时发多个`/imagine` prompt，每次最多3-4个并发。等5分钟，一批图就出来了。想加快？把Fast mode开着（前提有余量）。</p>
+
+<p>还有个<strong>私密模式</strong>：不要有人在公共频道盯着你的图看感觉尴尬，直接私信Midjourney Bot（在频道列表右键它，选择Message）。所有prompt和结果都在私聊里，没人打扰。但注意：私信里不能使用/blend，需要手动输入URL。</p>
+
+<p><strong>总结一个万能口诀：</strong></p>
+<ul>
+<li>调比例用`--ar`</li>
+<li>找风格用`--s`</li>
+<li>求惊喜用`--c`</li>
+<li>控细节用`--iw`和权重</li>
+<li>保一致性用seed</li>
+<li>改图用Remix</li>
+</ul>
+
+<p>记住这些，你的Midjourney水平就能从“能出图”变成“精准出图”。多试几次，你会发现每次迭代都能节省大量试错时间。</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/1313-AI工具使用技巧第1313篇.html">AI工具使用技巧第1313篇</a></li>
+<li><a href="/pages/articles/0871-AI设计第871篇.html">AI设计第871篇</a></li>
+<li><a href="/pages/articles/1294-AI工具使用技巧第1294篇.html">AI工具使用技巧第1294篇</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor编程第764篇 - AI效率指南</title>
+    <meta name="description" content="Cursor编程第764篇 Cursor编程第764篇：用了半年，这几个技巧让我写代码快3倍 大家好，我是老张。到今天为止，我每天用Cursor写代码已经有半年了，中间踩过不少坑，也攒了一堆“真香”操作。刚好写到第764篇心得，今天就掏心窝...">
+    <meta name="keywords" content="AI工具,AI教程,AI编程,Cursor编程第764篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0764-Cursor编程第764篇.html">
+    <meta property="og:title" content="Cursor编程第764篇">
+    <meta property="og:description" content="Cursor编程第764篇 Cursor编程第764篇：用了半年，这几个技巧让我写代码快3倍 大家好，我是老张。到今天为止，我每天用Cursor写代码已经有半年了，中间踩过不少坑，也攒了一堆“真香”操作。刚好写到第764篇心得，今天就掏心窝...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0764-Cursor编程第764篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Cursor编程第764篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "Cursor编程第764篇 Cursor编程第764篇：用了半年，这几个技巧让我写代码快3倍 大家好，我是老张。到今天为止，我每天用Cursor写代码已经有半年了，中间踩过不少坑，也攒了一堆“真香”操",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0764-Cursor编程第764篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI编程</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>Cursor编程第764篇</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>大家好，我是老张。到今天为止，我每天用Cursor写代码已经有半年了，中间踩过不少坑，也攒了一堆“真香”操作。刚好写到第764篇心得，今天就掏心窝子分享几个让我效率翻倍的技巧，不管你是刚接触Cursor还是已经用了一段时间，看完肯定有收获。</p>
+
+<h2>先别急着写代码，把项目上下文喂给AI</h2>
+
+<p>很多朋友一打开Cursor就急着敲提示词，结果AI生成的代码跑不通，改来改去更浪费时间。我踩过最大的坑就是：<strong>AI根本不了解你的项目结构</strong>。</p>
+
+<p>正确做法是：新建项目后，先按 `Ctrl+Shift+L` 打开“上下文面板”，把项目里的核心文件（比如配置文件、数据库模型、API路由）手动拽进去。或者在聊天框里直接打“请先阅读我项目里src目录下所有文件，然后告诉我整体架构”。这一步花不了3分钟，但AI后面生成的代码几乎不需要二次修改。</p>
+
+<p>举个例子，我写一个Node.js后台，以前每次让Cursor写接口，它老是自动用express写路由，而我实际用的是Koa。喂了上下文之后，它自动就识别出了路由中间件的写法，连错误处理都按我之前的风格来。</p>
+
+<h2>用“协议”替代“命令”，效果直接翻倍</h2>
+
+<p>很多人给Cursor的提示词像在命令下属：“写一个用户注册接口”。这样出来的代码通常很通用，但往往缺验证、缺错误码、缺日志。</p>
+
+<p>我后来学到一个高招：<strong>先写一份简单的“开发协议”</strong>。比如：</p>
+
+<p>&gt; 我们项目使用TypeScript，错误码统一用 `{ code: number, message: string }` 格式，所有接口都需要输入校验（用zod），并且每个函数都要写JSDoc。现在请按这个协议写一个用户注册接口，使用邮箱+密码，密码用bcrypt加密。</p>
+
+<p>看到没有？比单纯一个指令多了三行。但Cursor生成的代码直接就能用，连参数校验都帮你写好了。我习惯在项目根目录放一个 `cursor-rules.md` 文件，专门记录项目的编码规范，每次写新功能前先引用这个文件，AI从来不会跑偏。</p>
+
+<h2>巧用“快照”功能，再也不怕AI改坏代码</h2>
+
+<p>Cursor的“快照”功能（Snapshot）是我最爱的隐藏神技。当你对当前代码比较满意，准备让AI大改结构之前，先按 `Ctrl+Shift+S` 拍个快照。改完后如果不满意，点一下快照就能瞬间恢复，连撤销都省了。</p>
+
+<p>我之前重构一个老模块，AI连续三次改出了bug，我每次都要手动回退。用了快照之后，直接点回之前版本，然后再换一种提示词重来，效率至少省了20分钟。</p>
+
+<p>而且快照会保留完整的文件状态，包括未保存的修改。强烈建议每次大改动前都拍一张，就像游戏存档一样。</p>
+
+<h2>让AI帮你写测试，比你自己写还靠谱</h2>
+
+<p>写单元测试很多人嫌烦，但用Cursor可以反过来——<strong>先让AI写测试，再根据测试写实现</strong>。我现在的流程：</p>
+
+<p>1. 先描述功能需求，让Cursor生成测试用例。</p>
+<p>2. 看一眼测试，确认覆盖了边界情况。</p>
+<p>3. 然后让AI根据测试写实现代码。</p>
+<p>4. 跑测试，一次通过率超过80%。</p>
+
+<p>这是因为测试用例本身就能帮AI理解函数的输入输出预期，比直接说“实现一个函数”要清晰得多。有一次我写一个日期格式化函数，AI生成的测试连闰年、月份边界都考虑到了，比我手写还全。</p>
+
+<h2>最后的小提示：不要忽视Ctrl+K</h2>
+
+<p>很多人都知道 `Ctrl+I` 是对话，但 `Ctrl+K`（在选中代码时直接让AI修改）才是日常高频操作。选中一段代码，按 `Ctrl+K`，直接说“把这里的回调改成async/await”或者“给这个函数加上日志”，一秒搞定，连聊天界面都不用打开。这个技巧让我改代码的速度提升了至少一倍。</p>
+
+<p><strong>总结一下</strong>：喂上下文、写协议、用快照、测驱动、Ctrl+K。这五个技巧不需要背，用一次就能上瘾。Cursor这半年帮我把重复劳动砍掉了七成，剩下的时间都花在设计和思考上。如果你还没试过这些操作，今天晚上花10分钟跑一遍，明天写代码时你就知道有多香了。</p>
+
+<p>好了，第764篇就聊到这儿。下回见了，老张继续肝代码去。</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0685-AI工具教程第68篇.html">AI工具教程第68篇</a></li>
+<li><a href="/pages/articles/0126-Codeium对比测评哪个更适合你.html">Codeium对比测评：哪个更适合你</a></li>
+<li><a href="/pages/articles/0817-AI编程第817篇.html">AI编程第817篇</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>

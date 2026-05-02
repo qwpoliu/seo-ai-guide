@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjourney教程第863篇 - AI效率指南</title>
+    <meta name="description" content="Midjourney教程第863篇 Midjourney教程第863篇：如何用“风格参考”让AI画出你的专属味道 大家好，我是你们的Midjourney老司机。今天咱们聊点硬核的——风格参考（Style Reference）。这玩意儿简直是...">
+    <meta name="keywords" content="AI工具,AI教程,AI图像,Midjourney教程第863篇">
+    <link rel="canonical" href="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0863-Midjourney教程第863篇.html">
+    <meta property="og:title" content="Midjourney教程第863篇">
+    <meta property="og:description" content="Midjourney教程第863篇 Midjourney教程第863篇：如何用“风格参考”让AI画出你的专属味道 大家好，我是你们的Midjourney老司机。今天咱们聊点硬核的——风格参考（Style Reference）。这玩意儿简直是...">
+    <meta property="og:url" content="https://qwpoliu.github.io/seo-ai-guide/pages/articles/0863-Midjourney教程第863篇.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="AI效率指南">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+<script data-goatcounter="https://seo-ai-guide.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Midjourney教程第863篇",
+        "datePublished": "2026-05-02",
+        "author": {"@type": "Organization", "name": "AI效率指南编辑部"},
+        "description": "Midjourney教程第863篇 Midjourney教程第863篇：如何用“风格参考”让AI画出你的专属味道 大家好，我是你们的Midjourney老司机。今天咱们聊点硬核的——风格参考（Styl",
+        "url": "https://qwpoliu.github.io/seo-ai-guide/pages/articles/0863-Midjourney教程第863篇.html"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AI效率指南</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">首页</a></li>
+                <li><a href="/#categories">分类浏览</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article class="content-page">
+        <a href="/" class="back-link">← 返回首页</a>
+        <header>
+            <div class="post-meta">
+                <span class="post-category">AI图像</span>
+                <span class="post-date">2026-05-02</span>
+            </div>
+            <h1>Midjourney教程第863篇</h1>
+        </header>
+        <div class="article-body">
+
+
+<p>大家好，我是你们的Midjourney老司机。今天咱们聊点硬核的——<strong>风格参考（Style Reference）</strong>。这玩意儿简直是懒人神器，能让你不用费劲写长篇大论的提示词，就能稳定输出同一风格的图。而且，它还能帮你“复刻”别人的审美，或者把你自己的画风固定下来。话不多说，直接上干货。</p>
+
+<h2>一、先搞懂什么是“风格参考”</h2>
+
+<p>以前咱们用Midjourney，主要靠“图生图”（Image Prompt）或者写大段描述。但你会发现，同样的提示词，每次生成的细节、色调、笔触都可能天差地别。尤其是你想批量做同一系列作品，比如一套绘本插图或者品牌海报，光靠prompt很难稳住风格。</p>
+
+<p>风格参考（参数 `--sref`）就是专治这个毛病的。你可以丢一张你喜欢的图片给Midjourney，告诉它：“我就想要这种质感、这种配色、这种氛围，至于具体画什么，你来发挥。” 它会把那张图的<strong>整体风格（包括笔触、色调、光影、构图倾向）</strong>提取出来，应用到新生成的内容上。</p>
+
+<h2>二、一句话入门：`--sref` 的用法</h2>
+
+<p>最简单的操作：在提示词后面加上 `--sref [图片链接]`。比如：</p>
+
+<p>```</p>
+<p>a cat wearing a wizard hat --sref https://xxx.com/professor_cat.png</p>
+<p>```</p>
+
+<p>这样Midjourney就会“参考”这张教授的猫图风格，画出一只新的魔法猫。注意：它不是直接复制粘贴，而是理解风格后重新创作。所以如果你给的参考图是油画质感，新图大概率也会带有油画笔触和厚重色彩。</p>
+
+<h2>三、进阶玩法：多图混搭风格</h2>
+
+<p>你以为只能参考一张图？那你就小瞧AI了。你可以用<strong>多个图片链接</strong>组合风格。比如：</p>
+
+<p>```</p>
+<p>a futuristic city --sref https://xxx.com/cyberpunk_sky.png https://xxx.com/watercolor_cloud.png</p>
+<p>```</p>
+
+<p>左边给赛博朋克城市色彩，右边给水彩云朵的晕染感，最后生成的城市可能既有霓虹灯光，又有柔和的水彩边缘。玩这个比调鸡尾酒还上头。</p>
+
+<h2>四、权重控制：别让参考图“喧宾夺主”</h2>
+
+<p>有时候你发现用了 `--sref` 后，新图完全变成了参考图的“复刻版”，内容都不对劲了。这是因为你给的参考图<strong>风格权重太高</strong>。可以手动调低它：</p>
+
+<ul>
+<li>默认权重是 <strong>100</strong>（最高）</li>
+<li>调低到 <strong>50</strong>：风格影响减半</li>
+<li>调到 <strong>25</strong>：几乎不影响，主要靠prompt内容</li>
+</ul>
+
+<p>写法：`--sref https://xxx.com --sw 50`（`--sw`就是style weight）。我一般从50开始试，不够再加。</p>
+
+<h2>五、实战案例：做一套“手绘蜡笔”风格的小动物</h2>
+
+<p>假设你想画一套儿童绘本风的小动物，要求：边缘粗糙、颜色鲜艳、带有蜡笔笔触。</p>
+
+<p>1. <strong>找参考图</strong>：去网上随便搜一张蜡笔画（或者你自己以前画的也行）。</p>
+<p>2. <strong>写prompt</strong>：`a group of cute woodland animals playing in a forest --sref [蜡笔参考图链接] --sw 70`</p>
+<p>3. <strong>微调</strong>：如果觉得颜色太糊，加 `--stylize 300`（风格化参数，让AI更放飞）。如果笔触太碎，可以加 `--v 6.1`（最新版本对风格参考支持更好）。</p>
+
+<p>你试试，生成出来的小狐狸、小兔子，会自带那种“小孩随便涂”的可爱感，而且每一张之间风格统一得像同一个人画的。</p>
+
+<h2>六、避坑指南：常见翻车现场</h2>
+
+<ul>
+<li><strong>别用人脸特写照做风格参考</strong>：Midjourney会把脸部的五官分布也当作“风格”吸收进去，导致新人物长着跟参考图一样的五官，很诡异。建议用风景、质感纹理、抽象画作风格参考。</li>
+<li><strong>参考图越杂乱，效果越迷惑</strong>：一张图里既有水墨晕染又有几何线条，AI会懵。尽量选风格单一的图片。</li>
+<li><strong>和“图像权重”别混用</strong>：如果你同时用了 `--iw`（图像权重）和 `--sref`，容易打架。`--iw`控制的是内容相似度，`--sref`控制的是风格。一般只用后者就行。</li>
+</ul>
+
+<h2>七、这节课的作业</h2>
+
+<p>去Midjourney里试一个组合：用一张水彩花卉图 + 一张黑白素描人像图，生成一个“水彩素描风格”的独角兽。记得调整 `--sw` 到60左右。出图后评论区交作业，下期我会抽几张点评。</p>
+
+<p>好了，这一篇就聊到这。Midjourney教程第863篇，下次见。记住，画风不是玄学，是参数。</p>
+        </div>
+
+        <div class="related-articles">
+            <h3>📌 你可能还感兴趣</h3>
+            <ul><li><a href="/pages/articles/0335-AI教程第335篇.html">AI教程第335篇</a></li>
+<li><a href="/pages/articles/0838-AI工具第838篇.html">AI工具第838篇</a></li>
+<li><a href="/pages/articles/0238-2026年Vidu教程239篇.html">2026年Vidu教程：239篇</a></li>
+            </ul>
+        </div>
+        <div class="recommend-cta">
+            <p>💡 推荐使用 <strong>ChatGPT Pro</strong> — 解锁全部功能，提升工作效率 10 倍</p>
+            <p><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="cta-button">👉 立即体验 ChatGPT →</a></p>
+        </div>
+    </article>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 AI效率指南 - 精选AI工具评测与实用教程</p>
+        </div>
+    </footer>
+</body>
+</html>
